@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .post{
+           
+            background-color: #ccc;
+            padding: 40px;
+            overflow: hidden;
+            width: 100%;
+        }
+        h2{
+            text-align: center;
+            font-size: 35px;
+        }
+        p{
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Part Start -->
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="image/MH.png" alt="M-LOGO"></a>
+            </div>
+            <nav class="menu" id="top">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skill">SKill</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Header Part End -->
+    <div class="container">
+        <div class="post">
+            <h2>Designing a blog with html5</h2>
+            <div>
+                <h3>Setting the DOCTYPE </h3>
+                <p>HTML 5, when used as plain HTML rather than its XHTML 5 sibling doesn’t need a DOCTYPE. But all browsers do, otherwise they go into Quirksmode, which you don’t want: the collision of HTML 5 and Quirksmode is like matter and anti-matter meeting, and will cause a negative reality inversion that will make your underwear catch fire.</p>
+                   <br> <br>
+                    <p>You’ve been warned, so at the top of your document, you need the line <!DOCTYPE html>.</p> <br><br>
+                    
+                    <p>Some sites “use” HTML 5, when in actual fact all they’ve done is take their existing code and change the DOCTYPE. That’s fine and dandy if you’ve been using valid, semantic code as HTML 5 is very similar to valid HTML 4.01. Eric Meyer mentions small differences like “not permitting a value attribute on an image submit”, and there are a few differences between the languages, summarised in the document HTML 5 differences from HTML 4.</p>
+                    
+                    <p>However, I don’t want simply to rebadge my existing code, but to use some of the new structural elements now.</p>
+
+                    <h3>Using some new structural elements                    </h3>
+
+                    <p>My blog – like millions of others – has a header denoted by <div id="header">, a footer <div id="footer">, some articles (wrapped by an area called “content”, <div id="content">) and some navigation (wrapped up in an area called “sidebar” <div id="sidebar">). Most sites on the Web have similar constructs, although depending on your choice they might be called "branding" or "info" or "menu", or you might use the equivalent words in your own language.</p>
+
+                        <p>Although these all have very different functions within the page, they use the same generic div in the markup. as HTML 4 has no other way to code them. HTML 5 has new elements for distinguishing these logical areas: header, nav, footer and friends. (There’s more on this in an artice by Lachlan Hunt on A List Apart: A Preview of HTML 5.)</p>
+
+                        <p>The overall aim is to replace this structure:</p>
+                        <img src="image/html5-after12 (1).jpg" alt=""><br>
+                        <p>with this:  </p>
+                        <img src="image/html5-after12 (2).jpg" alt=""><br>
+                        <p>It’s a simple matter to change the HTML divs into the new elements. The only difficulty I had was deciding which element to use to mark up my sidebar, as it also includes a search field and “colophon” information as well as site-wide navigation. I decided against the aside element, as the spec says it “represents a section of a page that consists of content that is tangentially related to the content around the aside element, and which could be considered separate from that content”, but it’s nevertheless content rather than navigation. So I decided to go for the nav element as the closest fit.</p>
+
+                        <p>I’ve wrapped the main content in a <main> element, which maps to the ARIA role=main so that screenreaders and other assistive technologies can easily find the main content. Note that you should only use this element once per page.</p><br>
+                            
+                            <span style="width: 40%; display: block;float: left;"><a href="#top"><button style="padding: 10px 20px; border-radius: 10px;; background-color: darkcyan;">Go To Top</button></a></span>
+
+                            <span style="text-align: right;width: 40%;display: block;float: right;"><a href="css.html"><button style="padding: 10px 20px; border-radius: 10px;; background-color: darkcyan;">Next Post</button></a></span>
+            </div>
+        </div>
+    </div>
+        
+    </body>
+</html>
